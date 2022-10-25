@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="utf-8">
+	<title>Balloon</title>
+</head>
+<script>
+	function balloon_clicked() {
+
+		var bal = document.getElementById("balloon");
+
+		if (bal.style.backgroundColor == 'red')
+			bal.style.backgroundColor = 'green';
+		else if (bal.style.backgroundColor == 'green')
+			bal.style.backgroundColor = 'blue';
+		else
+			bal.style.backgroundColor = 'red';
+
+	}
+</script>
+
+<body>
+	<div id="balloon" class="balloon" onclick="balloon_clicked()" style="background-color: red;">
+	</div>
+</body>
+
+<style>
+	body {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		top: 0;
+	}
+
+	#balloon {
+		height: 200px;
+		width: 200px;
+		border-radius: 50%;
+		position: fixed;
+		top: 25%;
+		left: 25%;
+	}
+</style>
+
+</html>
