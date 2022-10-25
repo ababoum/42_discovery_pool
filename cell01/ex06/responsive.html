@@ -7,15 +7,14 @@
 </head>
 
 <body>
-	<div class="cell-container">
-		<div class="first-cell">
+	<table class="cell-container">
+		<td class="first-cell">
 			FIRST CELL
-		</div>
-
-		<div class="second-cell">
+		</td>
+		<td class="second-cell">
 			<p>SECOND CELL</p>
-		</div>
-	</div>
+		</td>
+	</table>
 </body>
 
 </html>
@@ -27,7 +26,8 @@
 
 	.cell-container {
 		position: absolute;
-		display: flex;
+		/* display: flex; */
+		border-collapse: collapse;
 	}
 
 	.first-cell {
@@ -39,6 +39,7 @@
 		position: fixed;
 		left: 0%;
 
+		/* this is for text centered */
 		display: flex;
 		flex-direction: column;
 		justify-content: center;

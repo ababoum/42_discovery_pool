@@ -6,6 +6,7 @@ body {
 .cell-container {
 	position: absolute;
 	display: flex;
+	border-collapse: collapse;
 }
 
 .first-cell {

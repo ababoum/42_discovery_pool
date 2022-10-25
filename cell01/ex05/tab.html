@@ -7,28 +7,20 @@
 </head>
 
 <body>
-	<div class="cell-container">
-		<div class="first-cell">
-			<p>FIRST CELL</p>
-		</div>
-
-		<div class="second-cell">
-			<p>SECOND CELL</p>
-		</div>
-	</div>
+	<table>
+		<tbody>
+			<tr>
+				<td class="first-cell">The table body</td>
+				<td class="second-cell">With two columns</td>
+			</tr>
+		</tbody>
+	</table>
 </body>
 
 <style>
-
 	body {
 		margin: 0;
 		padding: 0;
-	}
-
-	.cell-container {
-		display: flex;
-		align-items: flex-start;
-		width: 100%;
 	}
 
 	.first-cell {
@@ -36,6 +28,8 @@
 		width: 10rem;
 		padding: 0.5rem;
 		color: white;
+		font-size: large;
+		font-weight: bold;
 	}
 
 	.second-cell {
@@ -43,6 +37,8 @@
 		width: 10rem;
 		color: white;
 		padding: 0.5rem;
+		font-size: large;
+		font-weight: bold;
 	}
 </style>
 

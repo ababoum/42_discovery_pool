@@ -1,0 +1,84 @@
+body,
+html {
+	margin: 0;
+	padding: 0;
+	background-color: grey;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+
+}
+
+.header-block {
+	background-color: beige;
+	padding: 0.5rem;
+	text-align: center;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 200%;
+	font-weight: bold;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+hr {
+	margin: 0;
+	padding: 0;
+}
+
+.card {
+	background-color: lightcyan;
+	border-radius: 10px;
+	width: 60%;
+	justify-self: center;
+	position: relative;
+	top: 50%;
+}
+
+table {
+	padding: 0.5rem;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+img {
+	width: 10%;
+	border-radius: 50%;
+}
+
+td {
+	padding: 0.25rem;
+}
+
+img.logo {
+	width: 30px;
+}
+
+button {
+	cursor: pointer;
+	background-color: black;
+	color: white;
+	font-weight: bold;
+	width: 50%;
+	border-radius: 10px;
+	border-color: transparent;
+	outline: none;
+	box-shadow: 0 2px #999;
+}
+
+button:hover {
+	background-color: darkslategray
+}
+
+button:active {
+	background-color: darkslategray;
+	box-shadow: 0 1px #666;
+	transform: translateY(1px);
+}
+
+
+.login {
+	font-size: large;
+}

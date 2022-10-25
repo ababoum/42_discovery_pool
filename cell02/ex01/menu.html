@@ -10,19 +10,21 @@
 <body>
 	<div class="header">
 		<img class="logo" src="https://www.sncf.com/themes/contrib/sncf_theme/images/logo-sncf.svg?v=745795595">
-		<h1>Welcome to SNCF online menu</h1>
+		<h1>Bienvenue sur le menu en ligne - SNCF</h1>
 	</div>
 
-	<div class="menu">
-		<label for="meal-choices">Choose a dog name:</label>
-		<select name="dog-names" id="dog-names">
-			<option value="rigatoni">Rigatoni</option>
-			<option value="rigatoni">Rigatoni</option>
-			<option value="dave">Dave</option>
-			<option value="pumpernickel">Pumpernickel</option>
-			<option value="reeses">Reeses</option>
-		</select>
-	</div>
+	<main class="main-section">
+		<div class="menu">
+			<label class="menu-prompt" for="meal-choices">Choisissez votre article :</label>
+			<select name="meal-choices" class="drop-down-list">
+				<option> CLUB SANDWICH POULET</option>
+				<option> GRATIN DAUPHINOIS</option>
+				<option disabled> SOUPE DE COURGETTES</option>
+				<option> BISCUITS AU CITRON</option>
+				<option selected> CAFÉ</option>
+			</select>
+		</div>
+	</main>
 </body>
 
 </html>
