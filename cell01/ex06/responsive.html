@@ -9,7 +9,7 @@
 <body>
 	<div class="cell-container">
 		<div class="first-cell">
-			<p>FIRST CELL</p>
+			FIRST CELL
 		</div>
 
 		<div class="second-cell">
@@ -18,32 +18,43 @@
 	</div>
 </body>
 
+</html>
 <style>
-
 	body {
 		margin: 0;
 		padding: 0;
 	}
 
 	.cell-container {
+		position: absolute;
 		display: flex;
-		align-items: flex-start;
-		width: 100%;
 	}
 
 	.first-cell {
 		background-color: green;
-		width: 10rem;
-		padding: 0.5rem;
 		color: white;
+		width: 50%;
+		min-height: 100%;
+		padding: 0.5rem;
+		position: fixed;
+		left: 0%;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 	}
 
 	.second-cell {
 		background-color: blue;
-		width: 10rem;
 		color: white;
+		width: 50%;
+		min-height: 100%;
 		padding: 0.5rem;
+		position: fixed;
+		left: 50%;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 	}
 </style>
-
-</html>
