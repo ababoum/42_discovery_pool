@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>HTML/JS Calculator</title>
+</head>
+
+<script>
+
+    function isNumeric(str) {
+        if (typeof str != "string") return false // we only process strings!  
+        return !isNaN(str) && // use type coercion to parse the _entirety_ of the string (`parseFloat` alone does not do this)...
+            !isNaN(parseFloat(str)) // ...and ensure strings of whitespace fail
+    }
+
+    function do_calc() {
+
+
+        let rhs = document.forms["form"]["rhs"].value;
+        let lhs = document.forms["form"]["lhs"].value;
+        let op = document.forms["form"]["operator"].value;
+        let result;
+
+        if (!isNumeric(rhs) || !isNumeric(lhs)) {
+            alert("Error :(");
+            return false;
+        }
+        else if (+rhs < 0 || +lhs < 0) {
+            alert("Error :(");
+            return false;
+        }
+
+        switch (op) {
+            case '+':
+                result = +lhs + +rhs;
+                console.log(result);
+                alert(result);
+                break;
+
+            case '-':
+                result = +lhs - +rhs;
+                console.log(result);
+                alert(result);
+                break;
+
+            case '*':
+                result = +lhs * +rhs;
+                console.log(result);
+                alert(result);
+                break;
+
+            case '/':
+                if (+rhs === 0) {
+                    console.log("It’s over 9000!");
+                    alert("It’s over 9000!");
+                    return false;
+                }
+                result = +lhs / +rhs;
+                console.log(result);
+                alert(result);
+                break;
+
+            case '%':
+                if (+rhs === 0) {
+                    console.log("It’s over 9000!");
+                    alert("It’s over 9000!");
+                    return false;
+                }
+                result = +lhs % +rhs;
+                console.log(result);
+                alert(result);
+                break;
+        }
+        return false;
+    }
+</script>
+
+<body>
+
+    <script>
+        function use_me() {
+            setTimeout(function () {
+                alert('Please use me...');
+                use_me();
+            }, 30000);
+        };
+        use_me();
+    </script>
+
+    <div class="calculator-container">
+        <h1>Basic calculator</h1>
+        <form action="" id="form" onsubmit="do_calc(); return false;" method="POST">
+            <input type="text" required name="lhs" id="lhs" class="number-input">
+            <select class="operator" id="operator">
+                <option>+</option>
+                <option>-</option>
+                <option>*</option>
+                <option>/</option>
+                <option>%</option>
+            </select>
+            <input type="text" required name="rhs" id="rhs" class="number-input">
+            <input type="submit" value="Try me!">
+        </form>
+    </div>
+</body>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .calculator-container {
+        background-color: gray;
+        border-radius: 10px;
+        width: 60%;
+        height: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+
+        /* position */
+        position: fixed;
+        top: 40%;
+    }
+
+    form {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .number-input {
+        width: 30%;
+        margin: 0.25rem;
+        height: 50%;
+    }
+
+    .operator {
+        height: 100%;
+    }
+</style>
+
+</html>
