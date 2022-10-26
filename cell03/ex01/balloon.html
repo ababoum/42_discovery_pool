@@ -10,17 +10,55 @@
 
 		var bal = document.getElementById("balloon");
 
+		// change the balloon color
 		if (bal.style.backgroundColor == 'red')
 			bal.style.backgroundColor = 'green';
 		else if (bal.style.backgroundColor == 'green')
 			bal.style.backgroundColor = 'blue';
 		else
 			bal.style.backgroundColor = 'red';
+
+		// increase the balloon size
+		let new_width = +bal.style.width.slice(0, bal.style.width.length - 2) + 10;
+		let new_height = +bal.style.height.slice(0, bal.style.height.length - 2) + 10;
+
+		bal.style.width = new_width + "px";
+		bal.style.height = new_height + "px";
+
+		if (new_width > 420) { // detect explosion threshold
+			bal.style.width = 200 + "px";
+			bal.style.height = 200 + "px";
+		}
 	}
+
+	function balloon_left() {
+
+		var bal = document.getElementById("balloon");
+
+		// decrease the balloon size
+		let new_width = +bal.style.width.slice(0, bal.style.width.length - 2) - 5;
+		let new_height = +bal.style.height.slice(0, bal.style.height.length - 2) - 5;
+
+		if (new_width >= 200 && new_height >= 200) { // prevent going below minimal size
+			bal.style.width = new_width + "px";
+			bal.style.height = new_height + "px";
+		}
+
+		// change the balloon color
+		if (bal.style.backgroundColor == 'blue')
+			bal.style.backgroundColor = 'green';
+		else if (bal.style.backgroundColor == 'green')
+			bal.style.backgroundColor = 'red';
+		else
+			bal.style.backgroundColor = 'blue';
+	}
+
+
 </script>
 
 <body>
-	<div id="balloon" class="balloon" onclick="balloon_clicked()" style="background-color: red;">
+	<div id="balloon" class="balloon" onclick="balloon_clicked()" onmouseleave="balloon_left()"
+		style="background-color: red;height: 200px; width: 200px;">
 	</div>
 </body>
 
@@ -35,8 +73,6 @@
 	}
 
 	#balloon {
-		height: 200px;
-		width: 200px;
 		border-radius: 50%;
 		position: fixed;
 		top: 25%;

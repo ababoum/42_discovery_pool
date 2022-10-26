@@ -2,47 +2,59 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title>To do list</title>
-    <script src="todo.js"></script>
+	<meta charset="utf-8">
+	<title>To do list</title>
+	<script src="todo.js"></script>
 </head>
 
 
 <body>
 
-    <h1>My to-do list</h1>
-    <div id="ft_list">
-    </div>
-    <button onclick="new_task()">NEW</button>
+	<h1>My to-do list</h1>
+	<div id="ft_list"></div>
+	<button name="new" onclick="new_task()">New</button>
+
+	<div class="overlay" id="overlay" hidden>
+		<div class="confirm-box">
+			<div onclick="closeConfirmBox()" class="close">&#10006;</div>
+			<h2>Confirmation</h2>
+			<p>Are you sure to delete this task?</p>
+			<button onclick="isConfirm(true)">Yes</button>
+			<button onclick="isConfirm(false)">No</button>
+		</div>
+	</div>
 
 </body>
 
 <style>
-    body {
-        margin: 0;
-        padding: 0;
-        background-color: firebrick;
-    }
+	body {
+		margin: 0;
+		padding: 0;
+		background-color: firebrick;
+	}
 
-    h1 {
-        text-align: center;
-        background-color: black;
-        color: white;
-        padding: 10px;
-    }
+	h1 {
+		text-align: center;
+		background-color: black;
+		color: white;
+		padding: 10px;
+	}
 
-    #ft_list {
-        background-color: darksalmon;
-    }
+	#ft_list {
+		padding: 10px;
+		margin: 10px 0px;
+		background-color: rgb(180, 52, 52);
+	}
 
-    .task {
-        margin: 10px;
-    }
+	.task {
+		margin: 10px;
+		background-color: darksalmon;
+	}
 
-    button {
-        display: block;
-        margin: 0 auto;
-    }
+	button {
+		display: block;
+		margin: 0 auto;
+	}
 </style>
 
 </html>
