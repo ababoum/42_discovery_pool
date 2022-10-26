@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>HTML/JS Calculator</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<script>
+
+	function isNumeric(str) {
+		if (typeof str != "string") return false // we only process strings!  
+		return !isNaN(str) && // use type coercion to parse the _entirety_ of the string (`parseFloat` alone does not do this)...
+			!isNaN(parseFloat(str)) // ...and ensure strings of whitespace fail
+	}
+
+	$(document).ready(function () {
+
+		$("#calculator").submit((event) => {
+
+
+			if (!isNumeric($("#rhs").val()) || !isNumeric($("#lhs").val())) {
+				alert("Error :(");
+				return false;
+			}
+			else if (parseInt($("#rhs").val()) < 0 || parseInt($("#lhs").val()) < 0) {
+				alert("Error :(");
+				return false;
+			}
+
+			let rhs = parseInt($("#rhs").val());
+			let lhs = parseInt($("#lhs").val());
+
+
+			switch ($("#operator").val()) {
+				case '+':
+					result = lhs + rhs;
+					break;
+
+				case '-':
+					result = lhs - rhs;
+					break;
+
+				case '*':
+					result = lhs * rhs;
+					break;
+
+				case '/':
+					if (rhs === 0) {
+						console.log("It’s over 9000!");
+						alert("It’s over 9000!");
+						return false;
+					}
+					result = lhs / rhs;
+					break;
+
+				case '%':
+					if (rhs === 0) {
+						console.log("It’s over 9000!");
+						alert("It’s over 9000!");
+						return false;
+					}
+					result = lhs % rhs;
+					break;
+			}
+
+			console.log(result);
+			alert(result);
+
+			event.preventDefault();
+		})
+
+	});
+
+</script>
+
+<body>
+	<script>
+		function use_me() {
+			setTimeout(function () {
+				alert('Please use me...');
+				use_me();
+			}, 30000);
+		};
+		use_me();
+	</script>
+
+	<div class="calculator-container">
+		<h1>Basic calculator</h1>
+		<form action="" id="calculator">
+			<input type="text" required name="lhs" id="lhs" class="number-input">
+			<select class="operator" id="operator">
+				<option>+</option>
+				<option>-</option>
+				<option>*</option>
+				<option>/</option>
+				<option>%</option>
+			</select>
+			<input type="text" required name="rhs" id="rhs" class="number-input">
+			<input type="submit" value="Try me!">
+		</form>
+	</div>
+</body>
+
+<style>
+	body {
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.calculator-container {
+		background-color: gray;
+		border-radius: 10px;
+		width: 60%;
+		height: 20%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 1rem;
+
+		/* position */
+		position: fixed;
+		top: 40%;
+	}
+
+	form {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.number-input {
+		width: 30%;
+		margin: 0.25rem;
+		height: 50%;
+	}
+
+	.operator {
+		height: 100%;
+	}
+</style>
+
+</html>

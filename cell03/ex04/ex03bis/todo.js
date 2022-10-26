@@ -1,3 +1,14 @@
+$(document).ready(() => {
+
+	$("#new").click(() => {
+		new_task();
+	});
+
+	$("body").ready(() => {
+		load_tasks();
+	})
+});
+
 function create_node(str) {
 	if (!str)
 		return;
@@ -24,18 +35,18 @@ function new_task() {
 	if (res == "" || res === null)
 		return;
 
-	create_node(res);
-
+	console.log(Cookies.get('ft_list'))
 	// add the corresponding cookie
-
-	if (!document.cookie) {
-		document.cookie = "ft_list=";
-	}
-	document.cookie += res + "∅"; // ∅ is the list separator
+	if (Cookies.get('ft_list') === undefined)
+		Cookies.set('ft_list', "");
+	Cookies.set('ft_list', Cookies.get('ft_list') + res + '∅'); // ∅ is the list separator
+	console.log(Cookies.get('ft_list'))
+	create_node(res);
 }
 
 function remove_cookie(str) {
 	let list = document.cookie;
+
 
 	list = list.split("=");
 	if (list[0] != "ft_list") {
@@ -67,17 +78,12 @@ function delete_task(elem) {
 }
 
 function load_tasks() {
-	let list = document.cookie;
+	let list = Cookies.get('ft_list');
 
 	if (!list)
 		return;
 
-	list = list.split("=");
-	if (list[0] != "ft_list") {
-		return;
-	}
-
-	list = list[1].split("∅");
+	list = list.split("∅");
 
 	list.forEach(task => {
 		create_node(task);
