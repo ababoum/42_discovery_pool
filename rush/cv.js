@@ -1,8 +1,8 @@
 $(document).ready(() => {
 
-	$("#default_container").show();
+	$("#default_container").hide();
 	$("#mriant_container").hide();
-	$("#mababou_container").hide();
+	$("#mababou_container").show();
 
 
 	$("#gotocv1").click(() => {

@@ -31,7 +31,7 @@
 	<div id="default_container" class="container default">
 		<div class="overlay">
 			<div class="default_frame">
-				<span class="msg-0">Use navigation to switch between CV parts</span>
+				<span class="msg-0">Use the links below to switch between CVs</span>
 				<div class="cv_links">
 					<span id="gotocv1" class="link">CV Margaux Riant</span>
 					<span id="gotocv2" class="link">CV M'hamed Noé Ababou</span>
@@ -51,13 +51,13 @@
 
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto">
-					<li class="nav-item">
+					<li class="nav-item nav-item-space">
 						<a class="nav-link" href="#">Link1</a>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item nav-item-space">
 						<a class="nav-link" href="#">Link2</a>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item nav-item-space">
 						<a class="nav-link" href="#">Link3</a>
 					</li>
 				</ul>
@@ -82,21 +82,37 @@
 
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto">
-					<li class="nav-item">
-						<a class="nav-link" href="#">intro</a>
+					<li class="nav-item nav-item-space">
+						<a class="nav-link" data-offset="100" href="#mababou-about">About</a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">middle</a>
+					<li class="nav-item nav-item-space">
+						<a class="nav-link" data-offset="100" href="#mababou-resume">Resume</a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">end</a>
+					<li class="nav-item nav-item-space">
+						<a class="nav-link" href="#mababou-contact">Contact</a>
 					</li>
 				</ul>
 			</div>
 		</nav>
 		<div id="mababou_content" class="mababou_content">
+			<div class="blank-nav"></div>
 			<!-- cv content -->
-			banejour, je m'appelle M'hamed
+			<a class="anchor" id="mababou-about"></a>
+			<div class="section about" >
+				<h1>
+					About
+				</h1>
+			</div>
+
+			<a class="anchor" id="mababou-resume"></a>
+			<div class="section resume">
+				What did I do?
+			</div>
+
+			<a class="anchor" id="mababou-contact"></a>
+			<div class="section contact">
+				How to contact me?
+			</div>
 		</div>
 	</div>
 	<!-- MABABOU -->
