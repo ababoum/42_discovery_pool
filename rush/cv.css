@@ -4,6 +4,7 @@ body {
 	width: 100%;
 	margin: 0;
 	padding: 0;
+	overflow: auto;
 }
 
 html {
@@ -397,6 +398,7 @@ input[type=submit]:hover {
 
 /* MRIANT */
 
+/* ABOUT */
 .mriant_about_head {
 	display: flex;
 	flex-direction: row;
@@ -425,10 +427,12 @@ input[type=submit]:hover {
 
 .mriant_about_head>img {
 	width: 300px;
+	height: 300px;
 	border-radius: 5px;
 	margin: 5%;
 }
 
+/* Band with informations */
 .mriant_about_tail {
 	display: flex;
 	flex-direction: row;
@@ -461,6 +465,7 @@ input[type=submit]:hover {
 	color: gray;
 }
 
+/* SKILLS */
 .mriant_skills_expe {
 	display: flex;
 	flex-direction: row;
@@ -518,6 +523,7 @@ input[type=submit]:hover {
 	width: 30%;
 }
 
+/* EXPERIENCES */
 .mriant_skills_expe>.experiences {
 	display: flex;
 	flex-direction: column;
@@ -543,6 +549,8 @@ input[type=submit]:hover {
 	font-size: 30px;
 	color: darkcyan;
 }
+
+/* CONTACT */
 
 .mriant_contact>h1 {
 	font-size: 45px;
