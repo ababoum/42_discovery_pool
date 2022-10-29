@@ -548,3 +548,9 @@ input[type=submit]:hover {
 	font-size: 45px;
 	color: darkcyan;
 }
+
+.mriant_contact>section>h2 {
+	font-size: 30px;
+	color: darkcyan;
+	padding: 10px;
+}
