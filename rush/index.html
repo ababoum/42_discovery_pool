@@ -43,7 +43,7 @@
 
 	<!-- MRIANT -->
 	<div id="mriant_container" class="container">
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
 			<a id="gotohome1" class="navbar-brand" href="#">HOME</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,10 +56,10 @@
 						<a class="nav-link" href="#mriant_about">About</a>
 					</li>
 					<li class="nav-item nav-item-space">
-						<a class="nav-link" href="#mriant-skills_expe">Skills</a>
+						<a class="nav-link" href="#mriant_skills_expe">Resume</a>
 					</li>
 					<li class="nav-item nav-item-space">
-						<a class="nav-link" href="#">Link3</a>
+						<a class="nav-link" href="#mriant_contact">Contact</a>
 					</li>
 				</ul>
 			</div>
@@ -67,8 +67,8 @@
 		<div id="mriant_content" class="mriant_content">
 			<!-- cv content -->
 			<!-- about -->
-			<a class="anchor" id="mriant-about"></a>
 			<div class="section">
+				<a class="anchor" id="mriant-about"></a>
 				<div id="mriant_about" class="mriant_about">
 					<div id="mriant_about_head" class="mriant_about_head">
 						<img src="https://bit.ly/3NhJIQe" alt="photo_mriant">
@@ -80,9 +80,9 @@
 					<div id="mriant_about_tail" class="mriant_about_tail">
 						<div id="presentation" class="presentation">
 							<h1>About</h1>
-							<p>Hello, I am Margaux Riant. I am passionnate about code. I am skilled in C and currently
-								learning
-								aboout Oriented Object Programming.</p>
+							<p>Hello, I am Margaux Riant. I am passionnate about code. I am reconverting from
+								medicine to developper. I am skilled in C and currently
+								learning aboout Oriented Object Programming.</p>
 						</div>
 						<div id="infos" class="infos">
 							<div class="infos">Age:</div>
@@ -98,22 +98,54 @@
 				</div>
 			</div>
 			<!-- skills and experience -->
-			<a class="anchor" id="mriant-skills_expe"></a>
 			<div class="section">
+				<a class="anchor" id="mriant_skills_expe"></a>
 				<div class="mriant_skills_expe">
 					<div class="skills">
 						<h1>Skills</h1>
 						<label for="mriant_html">HTML:</label>
-						<progress id="mriant_html" max="100" value="50"></progress>
+						<div class="container-skill">
+							<div class="skills html">50%</div>
+						</div>
 						<label for="mriant_CSS">CSS:</label>
-						<progress id="mriant_CSS" max="100" value="50"></progress>
+						<div class="container-skill">
+							<div class="skills css">50%</div>
+						</div>
 						<label for="mriant_C">C:</label>
-						<progress id="mriant_C" max="100" value="95"></progress>
-						<label for="mriant_CPP">CPP:</label>
-						<progress id="mriant_CPP" max="100" value="20"></progress>
+						<div class="container-skill">
+							<div class="skills c">95%</div>
+						</div>
+						<label for="mriant_CPP">C++:</label>
+						<div class="container-skill">
+							<div class="skills cpp">20%</div>
+						</div>
 						<label for="mriant_python">Python:</label>
-						<progress id="mriant_python" max="100" value="30"></progress>
+						<div class="container-skill">
+							<div class="skills python">30%</div>
+						</div>
 					</div>
+					<div class="experiences">
+						<h1>Professionnal experiences</h1>
+						<div class="experience">
+							<h2>2D top-view video game</h2>
+							<p>A basic 2D game in which a grandma has to find marbles before leaving the game. Uses the
+								42School graphic library. Coded in C.</p>
+						</div>
+						<div class="experience">
+							<h2>Basic Ray-Tracer</h2>
+							<p>A ray-tracing engine with basics geometric figures (spheres, planes and cylinder). The
+								engine deals with ambient light, several point colored ligths, but not reflection or
+								textures. Coded in C.</p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<!-- Contact -->
+			<div class="section">
+				<a class="anchor" id="mriant_contact"></a>
+				<div class="mriant_contact">
+					<h1>Contact me</h1>
 				</div>
 			</div>
 			<!-- cv content -->
