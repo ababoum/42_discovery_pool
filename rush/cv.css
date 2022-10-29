@@ -364,9 +364,13 @@ input[type=submit] {
 	cursor: pointer;
 }
 
+.submit-contact-mriant[type=submit] {
+	background-color: darkcyan;
+}
+
 /* When moving the mouse over the submit button, add a darker green color */
 input[type=submit]:hover {
-	background-color: rgb(132, 149, 168);
+	background-color: rgb(64, 126, 126);
 }
 
 /* Add a background color and some padding around the form */

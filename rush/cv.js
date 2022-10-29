@@ -1,7 +1,7 @@
 $(document).ready(() => {
 
-	$("#default_container").fadeOut();
-	$("#mriant_container").fadeIn();
+	$("#default_container").fadeIn();
+	$("#mriant_container").fadeOut();
 	$("#mababou_container").fadeOut();
 
 
