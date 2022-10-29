@@ -25,7 +25,7 @@
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="cv.js"></script>
 	<link rel="stylesheet" href="cv.css">
-	
+
 </head>
 
 <body>
@@ -125,7 +125,7 @@
 	<!-- MABABOU -->
 	<div id="mababou_container" class="container">
 		<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-			<span id="gotohome2" class="navbar-brand" href="#">HOME</span>
+			<span id="gotohome2" class="navbar-brand">HOME</span>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -164,7 +164,9 @@
 						<br><strong>Software Engineer</strong>
 					</h2>
 					<h3>
-						78 Rue des Nénuphars · 75010 Paris · (+33) 663 123 456
+						78 Rue des Nénuphars
+						<br>75010 Paris
+						<br>(+33) 663 123 456
 					</h3>
 					<h4>
 						mababou@student.42.fr
@@ -178,20 +180,123 @@
 				<h1>
 					Skills and professional experience
 				</h1>
-				<section>
-					<h2>💻 Tech skills</h2>
-					<div class="skill">
-						<img class="lang-logo" src="img/c.png">
-						<div class="container-skill">
-							<div class="skills html">90%</div>
+				<div class="resume-blocks">
+					<section>
+						<h2>💻 Tech skills</h2>
+						<div class="skill">
+							<img class="lang-logo" src="img/c.png">
+							<div class="container-skill">
+								<div class="skills cpp-mababou">90%</div>
+							</div>
 						</div>
-					</div>
-				</section>
+						<div class="skill">
+							<img class="lang-logo" src="img/javascript.png">
+							<div class="container-skill">
+								<div class="skills js-mababou">40%</div>
+							</div>
+						</div>
+						<div class="skill">
+							<img class="lang-logo" src="img/typescript.png">
+							<div class="container-skill">
+								<div class="skills ts-mababou">50%</div>
+							</div>
+						</div>
+						<div class="skill">
+							<img class="lang-logo" src="img/gnu-bash.png">
+							<div class="container-skill">
+								<div class="skills bash-mababou">70%</div>
+							</div>
+						</div>
+						<div class="skill">
+							<img class="lang-logo" src="img/docker.png">
+							<div class="container-skill">
+								<div class="skills docker-mababou">50%</div>
+							</div>
+						</div>
+					</section>
+					<section>
+						<h2>💼 Professional experience</h2>
+						<div class="mababou-exp">
+							<img class="lang-logo" src="img/42.png">
+							<div class="mababou-exp-content">
+								<div><strong>2021 - 2024</strong></div>
+								<div><i>Coding Student</i></div>
+							</div>
+						</div>
+						<div class="mababou-exp">
+							<img class="lang-logo" src="img/shippeo.jpg">
+							<div class="mababou-exp-content">
+								<div><strong>2021 - 2022</strong></div>
+								<div><i>Project Manager</i></div>
+							</div>
+						</div>
+						<div class="mababou-exp">
+							<img class="lang-logo" src="img/bearing.jpg">
+							<div class="mababou-exp-content">
+								<div><strong>2019 - 2021</strong></div>
+								<div><i>Business Consultant</i></div>
+							</div>
+						</div>
+						<div class="mababou-exp">
+							<img class="lang-logo" src="img/casino.jpg">
+							<div class="mababou-exp-content">
+								<div><strong>2017 - 2019</strong></div>
+								<div><i>Operations Manager</i></div>
+							</div>
+						</div>
+					</section>
+				</div>
 			</div>
 
 			<a class="anchor" id="mababou-contact"></a>
 			<div class="section contact">
-				How to contact me?
+				<h1>
+					How to contact me
+				</h1>
+				<section>
+					<h2>Via the form below 👇</h2>
+					<div class="contact-container">
+						<form action="">
+
+							<label for="fname">First Name</label>
+							<input type="text" id="fname" name="firstname" placeholder="Your name">
+
+							<label for="lname">Last Name</label>
+							<input type="text" id="lname" name="lastname" placeholder="Your last name">
+
+							<label for="country">Country</label>
+							<select id="country" name="country">
+								<option value="France">France</option>
+								<option value="Belgium">Belgium</option>
+								<option value="Germany">Germany</option>
+							</select>
+
+							<label for="subject">Subject</label>
+							<textarea id="subject" name="subject" placeholder="Write something..."
+								style="height:20%"></textarea>
+
+							<input type="submit" value="Submit">
+
+						</form>
+					</div>
+				</section>
+				<section>
+					<h2>Via social networks 🙋</h2>
+					<div class="network-container">
+						<a href="https://www.youtube.com/watch?v=INscMGmhmX4">
+							<img class="network-logo" src="img/facebook.png">
+						</a>
+						<a href="https://www.youtube.com/watch?v=INscMGmhmX4">
+							<img class="network-logo" src="img/messenger.png">
+						</a>
+						<a href="https://www.youtube.com/watch?v=INscMGmhmX4">
+							<img class="network-logo" src="img/discord.png">
+						</a>
+						<a href="https://www.youtube.com/watch?v=INscMGmhmX4">
+							<img class="network-logo" src="img/linkedin.png">
+						</a>
+					</div>
+				</section>
 			</div>
 		</div>
 	</div>
