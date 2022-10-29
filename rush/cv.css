@@ -36,7 +36,7 @@ footer {
 .mriant_content {
 	height: 100%;
 	padding-top: 56px; /* avoid collision with navbar */
-	background-color: orange;
+	background-color: white;
 }
 
 .mababou_content {
@@ -142,4 +142,88 @@ a.anchor {
 
 .contact {
 	background-color: white;
+}
+
+/* MRIANT */
+
+.mriant_about_head {
+	display: flex;
+	flex-direction: row;
+	background-color: darkcyan;
+}
+
+.mriant_titles {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin: 10%;
+}
+
+.mriant_titles>h1 {
+	color: white;
+	font-size: 60px;
+	margin-bottom: 5%;
+}
+
+.mriant_titles>h2 {
+	color: cyan;
+	margin-top: 2%;
+}
+
+.mriant_about_head>img {
+	width: 300px;
+	border-radius: 5px;
+	margin: 5%;
+}
+
+.mriant_about_tail {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background-color: white;
+	padding: 5%;
+	font-size: 25px;
+}
+
+.mriant_about_tail>.presentation {
+	padding-right: 5%;
+}
+
+.mriant_about_tail>.presentation>h1 {
+	color: darkcyan;
+	font-size: 45px;
+}
+
+.mriant_about_tail>.infos {
+	padding-left: 5%;
+	min-width: 400px;
+	font-size: 20px;
+	text-align: left;
+	color: darkcyan;
+}
+
+
+.mriant_about_tail>.infos>.word {
+	text-align: right;
+	color: gray;
+}
+
+,.mriant_skills_expe {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.mriant_skills_expe>.skills {
+	display: flex;
+	flex-direction: column;
+	font-size: 25px;
+	color: darkcyan;
+}
+
+.mriant_skills_expe>.skills>h1 {
+	font-size: 45px;
 }
