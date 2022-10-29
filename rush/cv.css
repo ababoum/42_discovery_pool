@@ -355,7 +355,7 @@ textarea {
 }
 
 /* Style the submit button with a specific background color etc */
-input[type=submit] {
+input[type=button] {
 	background-color: rgb(39, 66, 94);
 	color: white;
 	padding: 12px 20px;
@@ -364,14 +364,10 @@ input[type=submit] {
 	cursor: pointer;
 }
 
-.submit-contact-mriant[type=submit] {
+.submit-contact-mriant[type=button] {
 	background-color: darkcyan;
 }
 
-/* When moving the mouse over the submit button, add a darker green color */
-input[type=submit]:hover {
-	background-color: rgb(64, 126, 126);
-}
 
 /* Add a background color and some padding around the form */
 .contact-container {
@@ -471,6 +467,8 @@ input[type=submit]:hover {
 
 /* SKILLS */
 .mriant_skills_expe {
+	width: 100%;
+	background-color: lightcyan;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
