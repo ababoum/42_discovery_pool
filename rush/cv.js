@@ -1,8 +1,8 @@
 $(document).ready(() => {
 
-	$("#default_container").fadeIn();
+	$("#default_container").fadeOut();
 	$("#mriant_container").fadeOut();
-	$("#mababou_container").fadeOut();
+	$("#mababou_container").fadeIn();
 
 
 	$("#gotocv1").click(() => {
@@ -11,7 +11,7 @@ $(document).ready(() => {
 		$("#mababou_container").fadeOut();
 	})
 
-	$("#gotocv2").click(() => {``
+	$("#gotocv2").click(() => {
 		$("#default_container").fadeOut();
 		$("#mriant_container").fadeOut();
 		$("#mababou_container").fadeIn();
